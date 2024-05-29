@@ -1,0 +1,31 @@
+{
+    "dryRun": "false",
+    "sourceAccount": "AWSaccountID",
+    "sourceRegion": "eu-west-3",
+    "eventTimeIso8601": "{$datetime->format(DateTime::ATOM)}",
+    "eventType": "UserInformationChange",
+    "eventVersion": "2",
+    "source": "overwhelm.go",
+    "eventId": "{uuidv4()}",
+    "trace": {
+    "traceId": "",
+    "spanId": ""
+    },
+    "signature": "{$kmsClient->sign(json_encode($event['data']))}",
+    "signatureAlg": "",
+    "signKeyId": "<KMS_SIGN_KEY_ID>",
+    "encryptedField": [
+    {
+        "encryptionKeyId": "<KEYID>",
+        "encryptedFields": [
+        "user.firstname"
+        ]
+    }
+    ],
+    "requestId": "ID API Gateway",
+    "generateBy": "le user Id du JWT",
+    "generateByType": "application|support_user|end_user|internal_user",
+    "eventData": {
+        "ici_ton_évènement": "toto"
+    }
+}
