@@ -1,6 +1,6 @@
 provider "aws" {
   region  = "eu-west-3"
-  profile = "playground_archi"
+  profile = "your-profile-name"
 }
 
 data "aws_caller_identity" "current" {}

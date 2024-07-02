@@ -48,10 +48,7 @@ resource "aws_sqs_queue_policy" "allow_lambda" {
   })
 
 }
-
-
 // DLQ
-
 resource "aws_sqs_queue" "busevents_queue_deadletter" {
   name = "busevents_queue_deadletter"
 }

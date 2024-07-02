@@ -226,7 +226,7 @@ En revanche il est possible d’utiliser OpenTelemetry, un standard de la télé
 Pour cela nous utilisons le framework GRPC pour communiquer avec le daemon opentelemetry collector.
 Les informations de la trace sont générées en PHP, transmises au collecteur opentelemetry via grpc.
 
-Exemple de tracage php → https://gitlab.app.l'entreprise.com/arc/poc/event-bus-load-test/-/blob/main/trz-bus-target3/Xray.php?ref_type=heads 
+
 
 layer open telemetry collector → arn:aws:lambda:eu-west-3:901920570463:layer:aws-otel-collector-amd64-ver-0-68-0:1
 

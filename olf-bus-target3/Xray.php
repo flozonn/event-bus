@@ -37,11 +37,7 @@ class Xray
 
     public function outgoingHttpCall()
     {
-        /*
-        otel:4317 endpoint corresponds to the collector endpoint in docker-compose 
-        If running this sample app locally, set the endpoint to correspond to the endpoint 
-        of your collector instance. 
-        */
+
         $endpoint = $this->getEndpoint();
         $transport = (new GrpcTransportFactory())->create($endpoint . OtlpUtil::method(Signals::TRACE));
         $exporter = new SpanExporter($transport);
@@ -91,11 +87,6 @@ class Xray
 
     public function awsSdkCall()
     {
-        /*
-            otel:4317 endpoint corresponds to the collector endpoint in docker-compose 
-            If running this sample app locally, set the endpoint to correspond to the endpoint 
-            of your collector instance. 
-        */
         $endpoint = $this->getEndpoint();
         $transport = (new GrpcTransportFactory())->create($endpoint . OtlpUtil::method(Signals::TRACE));
         $exporter = new SpanExporter($transport);
