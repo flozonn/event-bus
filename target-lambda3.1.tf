@@ -5,7 +5,7 @@ module "lambda31" {
   file_hash = filebase64sha256("${path.module}/olf-bus-target3.1/olf-bus-target3.zip")
   runtime   = "provided.al2"
   handler   = "index.php"
-  layers    = ["arn:aws:lambda:eu-west-3:403367587399:layer:php-81:242"]
+  layers    = ["arn:aws:lambda:eu-west-3:534081306603:layer:php-81:81"]
   policy_statements = [
     {
       "effect" : "Allow",

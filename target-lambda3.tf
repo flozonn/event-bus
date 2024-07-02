@@ -6,7 +6,7 @@ module "lambda3" {
   runtime   = "provided.al2"
   handler   = "index.php"
   timeout   = 35
-  layers    = ["arn:aws:lambda:eu-west-3:403367587399:layer:php-81:242", "arn:aws:lambda:eu-west-3:901920570463:layer:aws-otel-collector-amd64-ver-0-68-0:1", "arn:aws:lambda:eu-west-3:403367587399:layer:grpc-php-81:16"]
+  layers    = ["arn:aws:lambda:eu-west-3:534081306603:layer:php-81:81", "arn:aws:lambda:eu-west-3:901920570463:layer:aws-otel-collector-amd64-ver-0-68-0:1", "arn:aws:lambda:eu-west-3:403367587399:layer:grpc-php-81:16"]
   policy_statements = [
 
     {

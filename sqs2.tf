@@ -3,7 +3,7 @@ resource "aws_sqs_queue" "event_bus_target2_queue" {
   delay_seconds              = 0
   max_message_size           = 1024
   message_retention_seconds  = 345600
-  visibility_timeout_seconds = 30
+  visibility_timeout_seconds = 40
   receive_wait_time_seconds  = 10
   redrive_policy = jsonencode({
     deadLetterTargetArn = aws_sqs_queue.busevents_queue_deadletter2.arn
