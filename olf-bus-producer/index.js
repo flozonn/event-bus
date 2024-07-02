@@ -17,7 +17,7 @@ const kmsClient = AWSXRay.captureAWSv3Client(
 
 async function encryptData (data) {
   const command = new EncryptCommand({
-    KeyId: 'b0790249-1175-4c66-8cb0-f5d0151b9a05',
+    KeyId: '65300fe2-8bbf-4eec-aa8c-109a0ce5990d',
     Plaintext: Buffer.from(data)
   })
   const response = await kmsClient.send(command)
